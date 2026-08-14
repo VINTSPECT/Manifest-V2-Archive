@@ -54,14 +54,14 @@ A community-driven database for cataloging MV2 extensions to help users find ext
             <td>uBlock Origin</td>
             <td>https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en</td>
             <td>https://addons.mozilla.org/firefox/addon/ublock-origin/</td>
-            <td>https://github.com/gorhill/uBlock#ublock-origin/</td>
+            <td>https://github.com/gorhill/uBlock</td>
             <td>https://web.archive.org/web/20260705041116/https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en/</td>
                     </tr>
         <tr>
             <td>uBlock Origin development build</td>
             <td>https://chromewebstore.google.com/detail/ublock-origin-development/cgbcahbpdhpcegmbfconppldiemgcoii</td>
             <td>Not Available</td>
-            <td>https://github.com/gorhill/uBlock#ublock-origin/</td>
+            <td>https://github.com/gorhill/uBlock</td>
             <td>https://web.archive.org/web/20260618105856/https://chromewebstore.google.com/detail/ublock-origin-development/cgbcahbpdhpcegmbfconppldiemgcoii/</td>
                     </tr>
         <tr>
