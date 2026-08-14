@@ -121,13 +121,6 @@ A community-driven database for cataloging MV2 extensions to help users find ext
             <td>https://web.archive.org/web/20260618031851/https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag/</td>
     </tr>
         <tr>
-            <td>Tampermonkey Legacy</td>
-            <td>https://chromewebstore.google.com/detail/tampermonkey-legacy/lcmhijbkigalmkeommnijlpobloojgfn</td>
-            <td>https://addons.mozilla.org/firefox/addon/tampermonkey/</td>
-            <td>https://github.com/Tampermonkey/tampermonkey/</td>
-            <td>https://web.archive.org/web/20260617105450/https://chromewebstore.google.com/detail/tampermonkey-legacy/lcmhijbkigalmkeommnijlpobloojgfn</td>
-                </tr>
-        <tr>
             <td>ScriptSafe</td>
             <td>https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf</td>
             <td>https://addons.mozilla.org/en-US/firefox/addon/scriptsafe-ff/</td>
