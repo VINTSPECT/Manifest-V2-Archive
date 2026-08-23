@@ -24,7 +24,11 @@ A community project to create an MV2 extension archive as a way to honor extensi
 4. Online Archive, an archive that is automatically updated every day at 00:00 UTC. You can view the automatic updates for the MV2 extension in the releases section.
    
 # List of Extension Archives
+*  **AdGuard AdBlocker MV2**
 
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
+    ```
 
 # Contributions
 You can contribute to this archive by submitting a Feature Request (FR) in the issues section. Please include the extension’s name, a link to the extension (if it’s still available in the extension store), and a general description of the proposed extension’s functionality. I’m very open to all kinds of feedback.
