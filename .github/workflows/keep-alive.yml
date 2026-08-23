@@ -1,0 +1,29 @@
+name: Keep Repository Alive
+
+on:
+  schedule:
+    # Runs automatically on the 1st day of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update keep-alive log
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Create or update the keep-alive.txt file with the current date
+          date -u +"%Y-%m-%d %H:%M:%S UTC" > keep-alive.txt
+          
+          git add keep-alive.txt
+          git commit -m "Automated keep-alive: refresh repository activity" || exit 0
+          git push
