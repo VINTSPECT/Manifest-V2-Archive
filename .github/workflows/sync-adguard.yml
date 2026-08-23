@@ -1,0 +1,63 @@
+name: Sync AdGuard
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          UPSTREAM_REPO="AdguardTeam/AdguardBrowserExtension"
+          MY_REPO="${{ github.repository }}"
+          
+          # Get the latest tag
+          UPSTREAM_TAG=$(gh api repos/$UPSTREAM_REPO/releases/latest --jq .tag_name 2>/dev/null || echo "")
+          
+          if [ -z "$UPSTREAM_TAG" ]; then
+            echo "No release found for $UPSTREAM_REPO. Exiting."
+            exit 0
+          fi
+          
+          # Create a custom tag name to prevent conflicts
+          MY_TAG="adguard-${UPSTREAM_TAG}"
+          
+          echo "Checking release: $MY_TAG"
+          
+          # Check if the release already exists
+          if gh release view "$MY_TAG" --repo "$MY_REPO" >/dev/null 2>&1; then
+            echo "Release $MY_TAG already exists. No action needed."
+          else
+            echo "Creating new release: $MY_TAG"
+            
+            mkdir -p assets
+            cd assets
+            gh release download "$UPSTREAM_TAG" --repo "$UPSTREAM_REPO" || true
+            
+            # Verify if any asset files were successfully downloaded
+            if [ -n "$(ls -A .)" ]; then
+              RELEASE_NOTES=$(gh api repos/$UPSTREAM_REPO/releases/latest --jq .body 2>/dev/null || echo "No release notes.")
+              echo "$RELEASE_NOTES" > notes.txt
+              echo -e "\n\n---\n*Auto-synced from $UPSTREAM_REPO*" >> notes.txt
+              
+              gh release create "$MY_TAG" * \
+                --repo "$MY_REPO" \
+                --title "AdGuard $UPSTREAM_TAG" \
+                --notes-file notes.txt
+                
+              echo "Successfully created release for AdGuard!"
+            else
+              echo "Failed to download assets. Skipping release creation."
+            fi
+          fi
