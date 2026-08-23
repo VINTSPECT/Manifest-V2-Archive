@@ -13,8 +13,11 @@ A community project to create an MV2 extension archive as a way to honor extensi
 1. Wiki (https://github.com/VINTSPECT/Manifest-V2-Archive/wiki) consisting of:
    
    a. Guide to Installing Manifest V2 in Chromium‐Based Browsers (Developer Offline Mode)
+   
    b. Guide to Installing Chrome Extensions on Firefox‐Based Browsers
+   
    c. Tips for installing Firefox extensions in Chromium‐based browsers
+   
    d. Manifest V2 Database
    
 3. Offline Archive (https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0), an archive containing the MV2 extension that does not include the Forge software and does not have the extension file in the release section. You can download the extension here.
