@@ -41,100 +41,100 @@ A community project to create an MV2 extension archive as a way to honor extensi
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
- *  **🌐 ClearURLs**
+ *  **📰 Feedbro**
+
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
+    ```
+
+*  **⏫ Header Editor**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🔤 LocalCDN**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🔰 NoScript Security Suite**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **📛 Privacy Badger**
+
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
+    ```
+
+*  **🎯 Redirector**
+
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
+    ```
+
+*  ** 👾 ScriptSafe**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🔗 Skip Redirect**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-  *  **🌐 ClearURLs**
+*  **➕ Snap Links Plus**
+
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
+    ```
+
+*  **👤 Tampermonkey Legacy**
+
+    ```sh
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
+    ```
+
+*  **🍁 uBlock Origin**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🍃 uBlock Origin development build**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🎑 uMatrix**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **💫 Violentmonkey**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
     ```
 
-*  **🌐 ClearURLs**
+*  **🔊 Volume Master by Anon**
 
     ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
     ```
 
-*  **🌐 ClearURLs**
+*  **📻 World Wide Radio**
 
     ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
-    ```
-
-*  **🌐 ClearURLs**
-
-    ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
-    ```
-
-*  **🌐 ClearURLs**
-
-    ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
-    ```
-
-*  **🌐 ClearURLs**
-
-    ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
-    ```
-
-*  **🌐 ClearURLs**
-
-    ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
-    ```
-
-*  **🌐 ClearURLs**
-
-    ```sh
-    https://github.com/VINTSPECT/Manifest-V2-Archive/releases
+    https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
     ```
     
     
