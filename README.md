@@ -77,7 +77,7 @@ A community project to create an MV2 extension archive as a way to honor extensi
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases/tag/1.0
     ```
 
-*  ** 👾 ScriptSafe**
+*  **👾 ScriptSafe**
 
     ```sh
     https://github.com/VINTSPECT/Manifest-V2-Archive/releases
