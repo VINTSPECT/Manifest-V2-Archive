@@ -1,0 +1,70 @@
+name: Sync uBlock Origin Dev Build
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync Pre-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          UPSTREAM_REPO="gorhill/uBlock"
+          MY_REPO="${{ github.repository }}"
+          
+          # 1. Fetch releases and filter only pre-releases, then get the latest one
+          RELEASE_DATA=$(gh api repos/$UPSTREAM_REPO/releases --jq 'map(select(.prerelease == true)) | .[0]')
+          
+          # Check if a pre-release was found
+          if [ "$RELEASE_DATA" == "null" ]; then
+            echo "No pre-release found for $UPSTREAM_REPO. Exiting."
+            exit 0
+          fi
+          
+          UPSTREAM_TAG=$(echo "$RELEASE_DATA" | jq -r '.tag_name')
+          
+          # Create a specific tag name for the dev build
+          MY_TAG="ublock-dev-${UPSTREAM_TAG}"
+          
+          echo "Checking pre-release: $MY_TAG"
+          
+          # Check if this specific dev release already exists in your repo
+          if gh release view "$MY_TAG" --repo "$MY_REPO" >/dev/null 2>&1; then
+            echo "Release $MY_TAG already exists. No action needed."
+          else
+            echo "Creating new release for dev build: $MY_TAG"
+            
+            mkdir -p assets
+            cd assets
+            
+            # Download assets from the upstream pre-release
+            gh release download "$UPSTREAM_TAG" --repo "$UPSTREAM_REPO" || true
+            
+            # Verify if any asset files were successfully downloaded
+            if [ -n "$(ls -A .)" ]; then
+              # Extract release notes
+              echo "$RELEASE_DATA" | jq -r '.body // "No release notes."' > notes.txt
+              echo -e "\n\n---\n*Auto-synced from $UPSTREAM_REPO (Development Build)*" >> notes.txt
+              
+              # Create release in your repo
+              gh release create "$MY_TAG" * \
+                --repo "$MY_REPO" \
+                --title "uBlock Origin Dev $UPSTREAM_TAG" \
+                --notes-file notes.txt \
+                --prerelease
+                
+              echo "Successfully created release for uBlock Origin Dev!"
+            else
+              echo "Failed to download assets. Skipping release creation."
+            fi
+          fi
